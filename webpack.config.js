@@ -1,6 +1,5 @@
-const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-
+const path = require('path')
 const port = process.env.PORT || 3000;
 
 const PLUGINS = [];
@@ -54,6 +53,16 @@ module.exports = {
   plugins: PLUGINS,
   module: {
     rules: RULES,
+  },
+  resolve: {
+    alias: {
+        '@hooks':    path.resolve(__dirname, `src/hooks`),
+        '@components':path.resolve(__dirname, `src/components`),
+        '@constants': path.resolve(__dirname, `src/constants`),
+        '@controllers': path.resolve(__dirname, `src/controllers`),
+        '@api': path.resolve(__dirname, `src/api`),
+        '@views': path.resolve(__dirname, `src/views`),
+    }
   },
   devServer: {
     host: "localhost",

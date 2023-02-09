@@ -1,7 +1,7 @@
 import React from "react";
 import { Provider } from "react-redux";
 import store from "./store";
-import AppPages from "./pages";
+import AppPages from "@views";
 import './index.css'
 import './index.scss'
 

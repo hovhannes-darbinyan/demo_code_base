@@ -1,8 +1,9 @@
 import React, { useCallback, useState } from "react";
 import { useDispatch } from "react-redux";
-import Input from "../../components/common/input";
-import AuthController from "../../controllers/auth";
 import { useNavigate } from "react-router-dom";
+import Input from "@components/common/input";
+import AuthController from "@controllers/auth";
+
 const MemorizedInput = React.memo(Input);
 
 const LoginContainer = () => {
